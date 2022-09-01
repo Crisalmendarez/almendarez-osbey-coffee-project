@@ -7,3 +7,32 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.coffee {
+    background-color: hotpink;
+    border: red solid 1px;
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#coffee-form {
+    float: right;
+
+}
+
+.btn{
+    background-color: green;
+    width: 100%;
+}
+
+fieldset {
+    width: 90%;
+    height: 150px;
+    padding: 1em;
+    background-color: red;
+}
+
+

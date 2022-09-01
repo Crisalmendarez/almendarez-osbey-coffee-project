@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<div>' + coffee.id + '</div>';
+    html += '<div>' + coffee.name + '</div>';
+    html += '<div>' + coffee.roast + '</div>';
+    html += '</div>';
 
     return html;
 }
@@ -19,16 +19,41 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
+    console.log("event fired");
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    console.log(selectedRoast)
     coffees.forEach(function(coffee) {
+        // console.log(coffee.roast)
         if (coffee.roast === selectedRoast) {
+            console.log(selectedRoast)
             filteredCoffees.push(coffee);
         }
     });
+    console.log(filteredCoffees)
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+//below : wrote a function to render each type of coffee by type using a string and a forEach loop
+function coffeePageLoad(roast){
+
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === roast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+
+    return renderCoffees(filteredCoffees);
+}
+
+
+//break my code
+// function userCoffee(roastSelection) {
+//     if( roastSelection === roast);
+//     return filteredCoffes.push(coffees)
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -49,9 +74,24 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+
+//javascript to grab those three divs [l, m , d] from html
+let lightDiv = document.querySelector("#light");
+let mediumDiv = document.querySelector("#medium");
+let darkDiv = document.querySelector("#dark")
+var submitButton = document.getElementById('submit');
 var roastSelection = document.querySelector('#roast-selection');
+var roastOpt = document.getElementsByClassName("roastBtn");
+// let roastSelection.value = document.querySelector()
 
-tbody.innerHTML = renderCoffees(coffees);
-
+// tbody.innerHTML = renderCoffees(coffees);
+lightDiv.innerHTML = coffeePageLoad("light");
+darkDiv.innerHTML = coffeePageLoad("dark");
+mediumDiv.innerHTML = coffeePageLoad("medium")
 submitButton.addEventListener('click', updateCoffees);
+// roastOpt.addEventListener('click', functionName);
+
+
+// function userCoffee(coffees) {
+//     if (roastSelection.valueS)
+// }
