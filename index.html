@@ -1,74 +1,192 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title></title>-->
+<!--    &lt;!&ndash;CSS&ndash;&gt;-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    &lt;!&ndash;BOOTSTRAP&ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"-->
+<!--          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"-->
+<!--          crossorigin="anonymous">-->
+<!--    &lt;!&ndash;GOOGLE FONTS&ndash;&gt;-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=IM+Fell+English&display=swap"-->
+<!--          rel="stylesheet">-->
+<!--</head>-->
+<!--<body style="background: lavender">-->
+<!--<h1 class="title text-center mt-4">Coffee!</h1>-->
+<!--<hr class="m-3" id="line">-->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-lg-6">-->
+<!--            <div>-->
+<!--                <div>-->
+<!--                    <div>-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <div>ID</div>&ndash;&gt;&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <div>NAME</div>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <div>ROAST</div>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div id="coffees"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-lg-6">-->
+<!--            <form>-->
+<!--                <label for="roast-selection"></label>-->
+<!--                <p>Roast</p>-->
+<!--                <select class="border border-dark rounded p-2 my-3 w-100" id="roast-selection">-->
+<!--                    <option>all</option>-->
+<!--                    <option>light</option>-->
+<!--                    <option>medium</option>-->
+<!--                    <option>dark</option>-->
+<!--                </select>-->
+<!--                <p>Coffee Name</p>-->
+<!--                <form id="searchBar1" class="d-flex" role="search">-->
+<!--                    <input class="border border-dark rounded form-control my-2" type="search"-->
+<!--                           placeholder="Search" aria-label="Search">-->
+<!--                    <input style="color: white; background-color: blueviolet" class="border rounded w-100 p-2 my-2"-->
+<!--                           id="submit" type="submit"/>-->
+<!--                </form>-->
+<!--            </form>-->
+<!--            <form>-->
+<!--                <label for="roast-selection"></label>-->
+<!--                <p>Roast</p>-->
+<!--                <select class="border border-secondary rounded p-2 my-3 w-100" id="roast-selection2">-->
+<!--                    <option>light</option>-->
+<!--                    <option>medium</option>-->
+<!--                    <option>dark</option>-->
+<!--                </select>-->
+<!--                <p>Name</p>-->
+<!--                <form id="searchBar2" class="d-flex" role="search">-->
+<!--                    <input class="border border-dark rounded form-control my-2" type="search"-->
+<!--                           placeholder="Search" aria-label="Search">-->
+<!--                    <input style="color: white; background-color: blueviolet" class="border rounded w-100 p-2 my-2"-->
+<!--                           id="submit" type="submit"/>-->
+<!--                </form>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<script src="main.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
+
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
           crossorigin="anonymous">
+
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=IM+Fell+English&display=swap"
           rel="stylesheet">
+
+
 </head>
-<body style="background: lavender">
-<h1 class="title text-center mt-4">Coffee!</h1>
-<hr class="m-3" id="line">
+<body class="bodyElement">
+
+<!--HEADER-->
+<h1 class="title text-center">Coffee!</h1>
+
+<hr class="divider">
+
+<!--START OF GRID-->
+
 <div class="container">
     <div class="row">
-        <div class="col-lg-6">
-            <div>
-                <div>
-                    <div>
-<!--&lt;!&ndash;                        <div>ID</div>&ndash;&gt;-->
-                        <!--                        <div>NAME</div>-->
-                        <!--                        <div>ROAST</div>-->
-                    </div>
+
+        <!--JAVASCRIPT GOES HERE-->
+        <div class="one col-lg-6 mt-2">
+
+
+            <div class="container">
+                <h3 class="text-light text-center" id="para" style="display: none;">¯\_(ツ)_/¯</h3>
+
+                <div class="row" id="card">
+
                 </div>
-                <div id="coffees"></div>
+
+
             </div>
+
+            <!--END OF JAVASCRIPT-->
         </div>
-        <div class="col-lg-6">
-            <form>
-                <label for="roast-selection"></label>
-                <p>Roast</p>
-                <select class="border border-dark rounded p-2 my-3 w-100" id="roast-selection">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <p>Coffee Name</p>
-                <form id="searchBar1" class="d-flex" role="search">
-                    <input class="border border-dark rounded form-control my-2" type="search"
-                           placeholder="Search" aria-label="Search">
-                    <input style="color: white; background-color: blueviolet" class="border rounded w-100 p-2 my-2"
-                           id="submit" type="submit"/>
+
+
+        <!--DROPDOWN AND SEARCHBAR-->
+        <div class="two float-end col-lg-6 mt-2">
+
+            <!--ROAST SELECTION ONE-->
+            <div>
+                <form>
+
+                    <!--DROPDOWN 1-->
+                    <label for="roast-selection"></label>
+                    <h5>Roast</h5>
+                    <select class="border border-dark rounded w-100 mb-4 p-2" id="roast-selection">
+                        <option selected>All</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+
+
+                    <!-- SEARCHBAR 1-->
+                    <h5>Coffee Name</h5>
+                    <input type="text" class="form-control mt-3 mx-auto" id="myInput" placeholder="what's your mood today?" style="width: 100%;">
+
+                    <input class="btn w-100 mt-3" id="submit" type="submit" />
+
+
+                    <!--END OF ROAST SELECTION ONE-->
                 </form>
-            </form>
-            <form>
-                <label for="roast-selection"></label>
-                <p>Roast</p>
-                <select class="border border-secondary rounded p-2 my-3 w-100" id="roast-selection2">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <p>Name</p>
-                <form id="searchBar2" class="d-flex" role="search">
-                    <input class="border border-dark rounded form-control my-2" type="search"
-                           placeholder="Search" aria-label="Search">
-                    <input style="color: white; background-color: blueviolet" class="border rounded w-100 p-2 my-2"
-                           id="submit" type="submit"/>
+            </div>
+
+
+            <!--ROAST SELECTION TWO-->
+            <div>
+                <h2 class="text-center mt-5">Add a Coffee</h2>
+                <form>
+
+                    <!--DROPDOWN 2-->
+                    <label for="roast-selection"></label>
+                    <h5>Roast</h5>
+                    <select class="border border-dark rounded w-100 mb-4 p-2" id="roast-add">
+                        <option selected>All</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+
+
+                    <!-- SEARCHBAR 2 -->
+                    <h5>Name</h5>
+                    <input type="text" class="form-control mt-3 mx-auto" id="myInput2" placeholder="hello..." style="width: 100%;">
+
+                    <input class="btn w-100 mt-3 mb-4" id="submit2" type="submit" />
+
+                    <!--END OF ROAST SELECTION TWO-->
                 </form>
-            </form>
+            </div>
+
+            <!--END OF DROPDOWN AND SEARCHBAR-->
         </div>
     </div>
 </div>
+
+
 <script src="main.js"></script>
 </body>
 </html>
